@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comic Book Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-btn {
+      background-color: #007bff;
+      color: rgb(248, 248, 248);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover {
+      background-color: #057eff;
+    }
+
+    .centered-section {
+      display: flex;
+      justify-content: center; /*centers box on the page*/
+      align-items: center;
+      height: 80vh;
+      text-align: left; /*aligns the text in the box*/
+    }
+
+    .form-box { /*box around add comic book*/
+      background-color: rgba(236, 204, 204, 0.76);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(226, 98, 98, 0.747);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .form-box h2 { /*it changes the top box height*/
+      margin-bottom: 15px; 
+    }
+
+    .form-box label { /*box height*/
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+
+    .form-box button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-box button:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="home.html" class="navbar-brand">Comic Book Library</a>
+    <a href="library.html" class="nav-btn">Library</a>
+  </div>
+
+  <div class="centered-section">
+    <div class="form-box">
+      <h2>Add Comic Book:</h2>
+      <form>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="issue">Issue Number:</label>
+        <input type="text" id="issue" name="issue" required>
+
+        <label for="tags">Tags:</label>
+        <input type="text" id="tags" name="tags">
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="publication-date">Publication Date:</label>
+        <input type="date" id="publication-date" name="publication-date">
+        
+        <label for="image">Cover Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <button type="submit">Add Comic</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

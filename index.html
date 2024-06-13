@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comic Book Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a class="navbar-brand" href="#">Comic Book Library</a>
+  <div class="navbar-buttons">
+    <button id="homeBtn" class="nav-btn">Home</button>
+    <button id="libraryBtn" class="nav-btn">Library</button>
+  </div>
+</div>
+
+<div class="centered-section">
+  <div class="form-box">
+    <h2>Add Comic Book:</h2>
+    <label for="image">Cover Image:</label>
+    <input type="file" id="image" name="image" accept="image/*">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title">
+    <label for="issue">Issue Number:</label>
+    <input type="text" id="issue" name="issue">
+    <label for="tags">Tags (optional):</label>
+    <input type="text" id="tags" name="tags">
+    <button id="addComicBtn">Add Comic</button>
+  </div>
+</div>
+
+<div id="library-section" class="centered-section">
+  <div class="comic-grid">
+    <!-- Comic cards will be dynamically added here -->
+  </div>
+</div>
+
+<script>
+  document.getElementById("homeBtn").addEventListener("click", function() {
+    // Redirect to the home page
+    window.location.href = "home.html";
+  });
+
+  document.getElementById("libraryBtn").addEventListener("click", function() {
+    // Redirect to the library page
+    window.location.href = "library.html";
+  });
+
+  document.getElementById("addComicBtn").addEventListener("click", function() {
+    // Add comic functionality here
+    // This is where you would handle the form data and add a new comic to the library
+  });
+</script>
+
+</body>
+</html>
